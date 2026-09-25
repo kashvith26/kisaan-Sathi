@@ -1,44 +1,266 @@
-# KISSAN SATHI — Final Demo
+# 🌾 KISSAN SATHI
 
-This folder contains the final KISSAN SATHI demo application.
+### AI-Assisted Farmer–Buyer Platform for Smarter Agricultural Decisions
 
-## Easiest way on Windows
+**KISSAN SATHI** is a full-stack SIH prototype designed to help farmers make better decisions around crop selling, buyer discovery, transport, weather, dairy operations, and farmer support — all from one platform.
 
-1. Install Node.js 20 or newer.
-2. Double-click **RUN-KISSAN-SATHI.bat**.
-3. Wait for the first-time package installation.
-4. Open **http://localhost:5173**.
+## 🚀 Live Demo
 
-Or open a terminal in this folder and run:
+**Web App:**  
+https://kisaan-sathi-wg3m.vercel.app
+
+**GitHub:**  
+https://github.com/kashvith26/kisaan-Sathi
+
+> This is an SIH demonstration prototype. Several market, buyer, transport, weather, dairy, payment, and advisory values are demo/modelled data unless explicitly stated otherwise.
+
+---
+## 🔑 Demo Accounts
+
+### Farmer
+```text
+Email: farmer@kisansathi.demo
+Password: demo1234
+### Buyer
+Email: buyer@kisansathi.demo
+Password: demo1234
+## 🎯 What KISSAN SATHI Does
+
+KISSAN SATHI connects the major steps of a farmer's decision journey:
+
+**Produce → Understand Market → Find Buyers → Compare Options → Calculate Profit → Plan Transport → Complete Deal**
+
+It also provides dedicated workflows for **dairy farmers** and **agricultural buyers**.
+
+---
+
+## 👨‍🌾 Farmer Portal
+
+The Farmer Portal provides:
+
+- 🌱 Crop selling workflow
+- 📊 Market-price comparison
+- 🤝 Buyer discovery and matching
+- 💰 Profit and transport calculations
+- 🚚 Tractor / truck / rail transport comparison
+- 🌦️ Weather and route-risk information
+- 📦 Storage and transport planning
+- 🧑‍🌾 Farmer help desk and guidance
+- 🔎 Global search
+- 🎤 Browser-based voice assistant
+- 🤖 Role-aware AI assistant
+- 🌐 Multi-language interface
+- 🔐 Demo Aadhaar-verification workflow
+- 💾 Remember Me login
+
+---
+
+## 🐄 Dairy Farmer Support
+
+Dairy farmers are supported **inside the Farmer Portal**.
+
+Features include:
+
+- 🥛 Milk collection planning
+- 💹 Indicative milk-rate comparison
+- 🧪 Fat and SNF quality information
+- 🚚 Milk pickup and transport planning
+- 🤝 Milk buyer discovery
+- 📍 Buyer location and collection details
+- 🕐 Pickup timing
+- 💳 Payment-cycle information
+
+### Milk Buyer Connection
+
+Farmers can view milk buyers with information such as:
+
+- Buyer name
+- Location
+- Indicative milk rate
+- Daily milk requirement
+- Minimum fat requirement
+- Minimum SNF requirement
+- Pickup window
+- Payment cycle
+- Verification/demo status
+
+> Milk procurement figures shown in the prototype are demonstration values and are not guaranteed live offers.
+
+---
+
+## 🏢 Buyer Portal
+
+The Buyer Portal supports agricultural sourcing and procurement workflows.
+
+### Features
+
+- Farmer / supplier discovery
+- Competitive bidding workflow
+- Crop sourcing
+- Buyer requirements
+- Transport planning
+- Weather support
+- AI assistant
+
+### 🥛 Milk Requirements
+
+Dairy buyers can publish milk requirements including:
+
+- Required litres per day
+- Minimum fat %
+- Minimum SNF %
+- Collection location
+- Collection time window
+- Other sourcing conditions
+
+These requirements are demonstrated as part of the prototype workflow.
+
+---
+
+## 📰 Farmer Community
+
+KISSAN SATHI includes a dedicated **Community** section for farmers.
+
+It provides a curated feed covering:
+
+- Agriculture updates
+- Farmer-focused developments
+- Dairy and livestock topics
+- Agricultural technology
+- Climate and farming-related information
+- Farmer livelihood and diversification
+
+The Community section is available from both the **main page** and **Farmer Portal**.
+
+> The current news feed is a curated prototype snapshot, not a guaranteed live government news service.
+
+---
+
+## 🤖 AI & Voice Assistance
+
+KISSAN SATHI includes a floating AI helper for both farmers and buyers.
+
+It supports:
+
+- Role-aware quick questions
+- Contextual assistance
+- Text chat
+- Browser voice input where supported
+- Voice/audio responses where supported
+
+The assistant is designed to provide simple, farmer-friendly guidance during the workflow.
+
+---
+
+## 🌦️ Weather & Route Planning
+
+The weather dashboard uses **Leaflet + OpenStreetMap**.
+
+The selected route is displayed using geographic coordinates so that it stays aligned with the map during panning and zooming.
+
+> Weather values, route distances, corridor points, and transport figures are demo/modelled values and are not live navigation data.
+
+**Internet access is required for OpenStreetMap map tiles.**
+
+---
+
+## 🧪 SIH Demo Scope
+
+The prototype demonstrates:
+
+- Mobile/PWA-style interface
+- Demo Aadhaar verification
+- Competitive bidding
+- Small-farmer polling
+- FPO connection workflow
+- Farmer help desk
+- Farmer instruction guide
+- AI assistant
+- Browser voice assistant
+- Weather-risk mapping
+- Global search
+- Minimum/reference-price guardrails
+- Transport comparison
+- Dairy farmer workflows
+- Milk-buyer requirements
+- Farmer Community
+- Buyer Portal
+
+---
+
+## ⚠️ Demo Boundary
+
+The following are **not claimed as live production integrations**:
+
+- Real Aadhaar / UIDAI authentication
+- Guaranteed live market feeds
+- Real payment processing
+- Production-grade AI/ML guarantees
+- Live turn-by-turn navigation
+- Guaranteed live buyer procurement offers
+- Guaranteed live agricultural news feeds
+
+Where live integrations are unavailable, the prototype uses **sample, simulated, or modelled data**.
+
+---
+
+## 🏗️ Tech Stack
+
+### Frontend
+- React
+- TypeScript
+- Vite
+- Leaflet
+- Responsive/PWA-style UI
+
+### Backend
+- Node.js
+- Express
+- TypeScript
+- JWT authentication
+- PostgreSQL connectivity
+
+### AI Service
+- Python
+- FastAPI
+
+### Database
+- PostgreSQL
+
+### Deployment
+- **Vercel** → Frontend
+- **Render** → Express API
+- **Render** → AI Service
+- **Render PostgreSQL** → Database
+
+---
+
+```markdown
+## 💻 Local Setup
+
+### Local Services
+Frontend   → http://localhost:5173
+API        → http://localhost:4000
+AI Service → http://localhost:8000
+### Prerequisites
+
+- Node.js 20+
+- npm
+- Python 3.x (only if running the AI service locally)
+
+### Run
 
 ```bash
+npm install
 npm run dev
-```
+## 📁 Project Structure
 
-## Demo journey
-
-**Open the selling desk → Farmer desk → Sell Crop → Details → Prices → Buyers → Profit → Deal**
-
-The deeper farmer and buyer pages remain available from the side menu.
-
-## Demo boundary
-
-This release uses sample/demo market, buyer, transport, forecast and payment information. Payments are simulated and forecasts are estimates.
-
-PostgreSQL and the separate AI service are not required for the normal local demo launcher.
-
-## SIH demo feature set
-The current prototype demonstrates the expanded SIH workflow with: mobile/PWA experience, demo Aadhaar verification, competitive bidding, small-farmer polling, FPO connection, help desk, farmer instruction guide, browser voice-assistant demo, weather-risk map, global search, minimum/reference-price guardrails, and tractor/truck/rail transport comparison. External integrations such as real Aadhaar/UIDAI authentication, live market feeds, real payments and production AI services are not claimed as live in this local demo.
-
-
-### Weather route view
-The weather dashboard uses a lightweight India-only map with the selected route rendered in the same coordinate system as the map, so the route does not drift when selections change. The map is local UI/data and is intended as a demo route planner, not live turn-by-turn navigation.
-
-## Weather map note
-The weather dashboard now uses Leaflet with OpenStreetMap tiles. The selected route is drawn in geographic coordinates, so it stays attached to the map when you pan or zoom. Route distances, corridor points, weather and transport figures are demo/modelled values, not live navigation data. An internet connection is required for the map tiles.
-
-
-## Latest UI polish
-- Sidebar language selector and sign-out are full-width clickable controls.
-- Global search is widened.
-- Floating Kissan Sathi AI helper is available on farmer and buyer portals with role-aware quick questions and a small chat panel.
+```text
+KissanSaathi/
+├── client/       # React + Vite frontend
+├── server/       # Express + TypeScript API
+├── ai-service/   # FastAPI AI service
+├── database/     # PostgreSQL schema/assets
+├── docs/         # Documentation
+├── scripts/      # Build/helper scripts
+└── README.md
