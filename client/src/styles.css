@@ -1463,3 +1463,9 @@ main.portal-main{
 .agri-community-section .section-ribbon.purple,.community-hero .section-ribbon.purple{background:#7c3aed;color:#fff}
 @media(max-width:980px){.community-news-grid{grid-template-columns:1fr 1fr}.community-news-card.featured{grid-column:span 2}.landing-community-grid{grid-template-columns:1fr 1fr}.community-heading{align-items:flex-start}.community-heading-copy{align-items:flex-start}.community-heading-copy p{text-align:left}.farmer-story-grid{grid-template-columns:1fr 1fr}.farmer-story-card:last-child{grid-column:span 2}}
 @media(max-width:700px){.community-hero{flex-direction:column;align-items:flex-start}.community-news-grid{grid-template-columns:1fr}.community-news-card.featured{grid-column:auto}.landing-community-grid{grid-template-columns:1fr}.farmer-story-grid{grid-template-columns:1fr}.farmer-story-card:last-child{grid-column:auto}.agri-community-section{padding:50px 0 35px}.community-hero h2{font-size:24px}}
+
+/* Landing page alignment fix */
+.agri-home > main {
+  margin-left: 0 !important;
+  width: 100% !important;
+}
