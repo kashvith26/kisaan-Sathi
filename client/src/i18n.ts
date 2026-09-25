@@ -1,0 +1,15 @@
+export type Lang='en'|'hi'|'te'|'mr';
+export const languages:{key:Lang;label:string;native:string}[]=[
+ {key:'en',label:'English',native:'English'},
+ {key:'hi',label:'Hindi',native:'हिन्दी'},
+ {key:'te',label:'Telugu',native:'తెలుగు'},
+ {key:'mr',label:'Marathi',native:'मराठी'}
+];
+export const ui:Record<Lang,Record<string,string>>={
+ en:{farmer:'Farmer Portal',buyer:'Buyer Portal',workspace:'WORKSPACE',community:'Community',dashboard:'Dashboard',sell:'Sell Crop',crops:'My Crops',markets:'Markets',forecast:'Forecast',opportunities:'Opportunities',transport:'Transport',buyers:'Buyers',whatif:'What-If',storage:'Storage',collective:'Collective Selling',deals:'Deals',payments:'Payments',grievances:'Grievances',profile:'Profile',signout:'Sign out',login:'Sign in',open:'Open your desk',email:'Email',password:'Password',loginButton:'Log in',wrong:'Incorrect email or password.',credentials:'Demo credentials are shown below.',language:'Language',sample:'Sample workspace'},
+ hi:{farmer:'किसान पोर्टल',buyer:'खरीदार पोर्टल',workspace:'वर्कस्पेस',community:'समुदाय',dashboard:'डैशबोर्ड',sell:'फसल बेचें',crops:'मेरी फसलें',markets:'मंडियां',forecast:'पूर्वानुमान',opportunities:'अवसर',transport:'परिवहन',buyers:'खरीदार',whatif:'क्या-क्या हो',storage:'भंडारण',collective:'सामूहिक बिक्री',deals:'सौदे',payments:'भुगतान',grievances:'शिकायतें',profile:'प्रोफ़ाइल',signout:'साइन आउट',login:'साइन इन',open:'अपना डेस्क खोलें',email:'ईमेल',password:'पासवर्ड',loginButton:'लॉग इन',wrong:'ईमेल या पासवर्ड गलत है।',credentials:'डेमो क्रेडेंशियल नीचे दिए गए हैं।',language:'भाषा',sample:'डेमो वर्कस्पेस'},
+ te:{farmer:'రైతు పోర్టల్',buyer:'కొనుగోలుదారు పోర్టల్',workspace:'వర్క్‌స్పేస్',community:'రైతు సమాజం',dashboard:'డ్యాష్‌బోర్డ్',sell:'పంట అమ్మకం',crops:'నా పంటలు',markets:'మార్కెట్లు',forecast:'ధర అంచనా',opportunities:'అవకాశాలు',transport:'రవాణా',buyers:'కొనుగోలుదారులు',whatif:'లాభ గణన',storage:'నిల్వ',collective:'సామూహిక విక్రయం',deals:'ఒప్పందాలు',payments:'చెల్లింపులు',grievances:'ఫిర్యాదులు',profile:'ప్రొఫైల్',signout:'సైన్ అవుట్',login:'సైన్ ఇన్',open:'మీ డెస్క్ తెరవండి',email:'ఈమెయిల్',password:'పాస్‌వర్డ్',loginButton:'లాగిన్',wrong:'ఈమెయిల్ లేదా పాస్‌వర్డ్ తప్పు.',credentials:'డెమో వివరాలు క్రింద ఉన్నాయి.',language:'భాష',sample:'డెమో వర్క్‌స్పేస్'},
+ mr:{farmer:'शेतकरी पोर्टल',buyer:'खरेदीदार पोर्टल',workspace:'वर्कस्पेस',community:'शेतकरी समुदाय',dashboard:'डॅशबोर्ड',sell:'पीक विक्री',crops:'माझी पिके',markets:'बाजारपेठा',forecast:'किंमत अंदाज',opportunities:'संधी',transport:'वाहतूक',buyers:'खरेदीदार',whatif:'नफा गणना',storage:'साठवणूक',collective:'सामूहिक विक्री',deals:'व्यवहार',payments:'देयके',grievances:'तक्रारी',profile:'प्रोफाइल',signout:'साइन आउट',login:'साइन इन',open:'तुमचे डेस्क उघडा',email:'ईमेल',password:'पासवर्ड',loginButton:'लॉग इन',wrong:'ईमेल किंवा पासवर्ड चुकीचा आहे.',credentials:'डेमो तपशील खाली दिले आहेत.',language:'भाषा',sample:'डेमो वर्कस्पेस'}
+};
+export function getLang():Lang{const v=localStorage.getItem('ks_lang') as Lang|null;return v&&ui[v]?v:'en';}
+export function setLang(v:Lang){localStorage.setItem('ks_lang',v);window.dispatchEvent(new Event('ks-language-change'));}
