@@ -1,0 +1,31 @@
+services:
+  postgres:
+    image: postgres:17-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: kissan_sathi
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports: ['5432:5432']
+    volumes: [postgres_data:/var/lib/postgresql/data, ./database/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro]
+  ai-service:
+    build: ./ai-service
+    environment: [AI_PORT=8000, ENVIRONMENT=development, MODEL_MODE=demo]
+    ports: ['8000:8000']
+  server:
+    build: ./server
+    environment:
+      PORT: 4000
+      DATABASE_URL: postgresql://postgres:postgres@postgres:5432/kissan_sathi
+      JWT_SECRET: change-me-in-production-please-use-a-long-secret
+      AI_SERVICE_URL: http://ai-service:8000
+      CORS_ORIGIN: http://localhost:5173
+    ports: ['4000:4000']
+    depends_on: [postgres, ai-service]
+  client:
+    build: ./client
+    environment: [VITE_API_BASE_URL=http://localhost:4000/api]
+    ports: ['5173:80']
+    depends_on: [server]
+volumes:
+  postgres_data:
